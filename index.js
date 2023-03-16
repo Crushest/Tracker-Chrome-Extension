@@ -5,7 +5,7 @@ const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
 const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") )
-const tabBtn = document.getElementById("tab-btn")
+
 
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage
@@ -15,11 +15,15 @@ if (leadsFromLocalStorage) {
 function render(leads) {
     let listItems = ""
     for (let i = 0; i < leads.length; i++) {
+        let [descStr, priceStr, site] = leads[i].split("|");
         listItems += `
             <li>
-                <a target='_blank' href='${leads[i]}'>
-                    ${leads[i]}
+                <p>
+                <a target='_blank' href='${site}'>
+                ${descStr}
                 </a>
+                $${priceStr}
+                </p>
             </li>
         `
     }
@@ -34,12 +38,13 @@ deleteBtn.addEventListener("dblclick", function() {
 
 inputBtn.addEventListener("click", function() {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-        site = tabs[0].url
-        return site
-    })
-    myLeads.push(desc.value + " $" + price.value + " " + site.url )
-    desc.value = ""
-    price.value = ""
-    localStorage.setItem("myLeads", JSON.stringify(myLeads) )
-    render(myLeads)
+        let site = tabs[0].url
+        let descStr = desc.value
+        let priceStr = price.value
+        myLeads.push(`${descStr}|${priceStr}|${site}` )
+        desc.value = ""
+        price.value = ""
+        localStorage.setItem("myLeads", JSON.stringify(myLeads) )
+        render(myLeads)
+    }) 
 })
