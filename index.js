@@ -23,11 +23,18 @@ function render(leads) {
                 ${descStr}
                 </a>
                 $${priceStr}
+                <button id='cancel' onclick='deleteItem(${i})'><img src='cancel.png' border='0' /></button>
                 </p>
             </li>
         `
     }
     ulEl.innerHTML = listItems
+}
+
+function deleteItem() {
+    myLeads.splice(index, 1);
+    localStorage.setItem("myLeads", JSON.stringify(myLeads));
+    render(myLeads);
 }
 
 deleteBtn.addEventListener("dblclick", function() {
