@@ -23,7 +23,7 @@ function render(leads) {
                 ${descStr}
                 </a>
                 $${priceStr}
-                <button id='cancel' onclick='deleteItem(${i})'><img src='cancel.png' border='0' /></button>
+                <button id="cancel" onclick='deleteItem(${i})'><img src='cancel.png' border='0' /></button>
                 </p>
             </li>
         `
@@ -31,7 +31,7 @@ function render(leads) {
     ulEl.innerHTML = listItems
 }
 
-function deleteItem() {
+function deleteItem(index) {
     myLeads.splice(index, 1);
     localStorage.setItem("myLeads", JSON.stringify(myLeads));
     render(myLeads);
