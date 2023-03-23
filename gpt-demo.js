@@ -46,11 +46,7 @@ function render(leads) {
     })
 }
 
-leads = [
-    "Product 1|100|https://www.example.com/product1",
-    "Product 2|200|https://www.example.com/product2",
-    "Product 3|300|https://www.example.com/product3",
-]
+leads = []
 
 const ulEl = document.querySelector('ul')
 render(leads)
