@@ -38,6 +38,7 @@ function render(leads) {
             const index = li.getAttribute('data-index')
             leads.splice(index, 1)
             render(leads)
+            localStorage.setItem("myLeads", JSON.stringify(leads))
         })
     })
 }
