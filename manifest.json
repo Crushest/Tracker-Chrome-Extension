@@ -7,6 +7,7 @@
         "default_icon": "M.png"
     },
     "permissions": [
-        "tabs"
+     "activeTab"
     ]
+      
 }
