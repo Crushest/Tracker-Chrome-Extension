@@ -1,72 +1,70 @@
 body {
-    margin: 0;
-    padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    max-width: fit-content;
-    background-color: #ffffff;
-    max-height: fit-content;
+  margin: 0;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: fit-content;
+  background-color: #ffffff;
+  max-height: fit-content;
 }
 
-#input{
-    width: 250px;
-    display: flex;
-    flex-direction: row;
-    gap: 1.5vw;
+#input {
+  width: 250px;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5vw;
 }
 input {
-    width: 50%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #F28B7D;
-    margin-bottom: 4px;
-    border-radius: 4px;
+  width: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #f28b7d;
+  margin-bottom: 4px;
+  border-radius: 4px;
 }
 
-#even{
-    background-color: #F28B7D;
-    padding: 10px 1vw;
-    border-radius: 4px;
-    display: flex;
-    flex-direction: row;
-    gap: 1vw;
-    justify-content: space-around;
+#even {
+  background-color: #f28b7d;
+  padding: 10px 1vw;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  justify-content: space-around;
 }
 button {
-    background: #F28B7D;
-    color: white;
-    padding: 10px 20px;
-    border: 1px solid #F28B7D;
-    border-radius: 4px;
-    font-weight: bold;
-    cursor: pointer;
+  background: #f28b7d;
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid #f28b7d;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 #delete-btn {
-    background: white;
-    color: #ED5945;
+  background: white;
+  color: #ed5945;
 }
-#cancel img{
-    width: 5vw;
-    height: 5vw;
+#cancel img {
+  width: 5vw;
+  height: 5vw;
 }
-#cancel{
-    cursor: pointer;
-    appearance: none;
-    background-color: inherit;
-    border: none;
+#cancel {
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
+  border: none;
 }
 ul {
-    margin-top: 20px;
-    list-style: none;
-    padding-left: 0;
+  margin-top: 20px;
+  list-style: none;
+  padding-left: 0;
 }
 
 li {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 a {
-    color: #F28B7D;
+  color: #f28b7d;
 }
-
-
