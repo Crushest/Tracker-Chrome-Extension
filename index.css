@@ -17,13 +17,13 @@ input {
     width: 50%;
     padding: 10px;
     box-sizing: border-box;
-    border: 1px solid #EE6958;
+    border: 1px solid #F28B7D;
     margin-bottom: 4px;
     border-radius: 4px;
 }
 
 #even{
-    background-color: #EE6958;
+    background-color: #F28B7D;
     padding: 10px 1vw;
     border-radius: 4px;
     display: flex;
@@ -32,10 +32,10 @@ input {
     justify-content: space-around;
 }
 button {
-    background: #EE6958;
+    background: #F28B7D;
     color: white;
     padding: 10px 20px;
-    border: 1px solid #EE6958;
+    border: 1px solid #F28B7D;
     border-radius: 4px;
     font-weight: bold;
     cursor: pointer;
@@ -43,7 +43,7 @@ button {
 
 #delete-btn {
     background: white;
-    color: #F07A6A;
+    color: #ED5945;
 }
 #cancel img{
     width: 5vw;
